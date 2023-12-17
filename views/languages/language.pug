@@ -1,0 +1,71 @@
+extends ../layout
+
+block header
+  header.header
+    a.logo(href="#")
+      span.coding Coding
+      span.seekers Seekers
+    nav.navbar
+      a(href="/mainpage") Home
+      a(href="#about") About
+      a(href="#reviews") Reviews
+      a(href="#contact") Contact US
+      .dropdown
+        .dropdown
+          a.btn.btn-secondary.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false") Languages
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href="/mainpage/languages") Python
+            li
+              a.dropdown-item(href="/mainpage/languages") JavaScript
+            li
+              a.dropdown-item(href="/mainpage/languages") Java 
+            li
+              a.dropdown-item(href="/mainpage/languages") C++
+            li
+              a.dropdown-item(href="/mainpage/languages") HTML/CSS
+            li
+              a.dropdown-item(href="/mainpage/languages") C#
+            li
+              a.dropdown-item(href="/mainpage/languages") Ruby
+            li
+              a.dropdown-item(href="/mainpage/languages") Swift
+            li
+              a.dropdown-item(href="/mainpage/languages") React
+            li
+              a.dropdown-item(href="/mainpage/languages") React Native
+            li
+              a.dropdown-item(href="/mainpage/languages") Kotlin
+            li
+              a.dropdown-item(href="/mainpage/languages") Flutter      
+      a.btn(href="/login") Register        
+
+block content
+  h1 Here is my languages data that comes from the database
+
+  each language in languages || []
+    h2= language.title
+    p= language.description
+    p= "Language: " + (language.language || 'N/A')
+    p= "Resource Type: " + (language.resource_type || 'N/A')
+    p= "Link: " + (language.link || 'N/A')
+    p= "Author: " + (language.author || 'N/A')
+    p= "Level: " + (language.level || 'N/A')
+    p= "Rating: " + (language.rating || 'N/A')
+    p= "Date Added: " + (language.date_added ? language.date_added.toLocaleDateString() : 'N/A')
+    p= "Views Count: " + (language.views_count || 'N/A')
+
+    // Tags
+    p Tags:
+    each tag in language.tags || []
+      span.tags= tag
+
+    // Comments
+    if language.comments && language.comments.length > 0
+      h3 Comments:
+      each comment in language.comments
+        div.comment
+          p= "User: " + (comment.user || 'N/A')
+          p= "Comment: " + (comment.comment_text || 'N/A')
+    else
+      p No comments available

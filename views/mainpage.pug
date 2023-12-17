@@ -1,0 +1,144 @@
+extends layout
+
+block header
+  header.header
+    a.logo(href="#")
+      span.coding Coding
+      span.seekers Seekers
+    nav.navbar
+      a(href="#") Home
+      a(href="#about") About
+      a(href="#reviews") Reviews
+      a(href="#contact") Contact US
+      .dropdown
+        .dropdown
+          a.btn.btn-secondary.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false") Languages
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href="/mainpage/languages") Python
+            li
+              a.dropdown-item(href="/mainpage/languages") JavaScript
+            li
+              a.dropdown-item(href="/mainpage/languages") Java 
+            li
+              a.dropdown-item(href="/mainpage/languages") C++
+            li
+              a.dropdown-item(href="/mainpage/languages") HTML/CSS
+            li
+              a.dropdown-item(href="/mainpage/languages") C#
+            li
+              a.dropdown-item(href="/mainpage/languages") Ruby
+            li
+              a.dropdown-item(href="/mainpage/languages") Swift
+            li
+              a.dropdown-item(href="/mainpage/languages") React
+            li
+              a.dropdown-item(href="/mainpage/languages") React Native
+            li
+              a.dropdown-item(href="/mainpage/languages") Kotlin
+            li
+              a.dropdown-item(href="/mainpage/languages") Flutter      
+      a.btn(href="/login") Register        
+
+block content
+  
+    section.hero-section
+      div.hero-content-left
+        h3 An Investment In Knowledge
+        br
+        h3 Pays The Best Interest
+        h1 Best Learning Platform
+        p Embark on a transformative learning journey with us, where every lesson is a stepping
+        br
+        | stone to a brighter future. Our commitment to excellence makes us the best learning
+        br
+        | platform, ensuring an investment in knowledge pays the best interest
+        a.btn(href="#") Explore Language Courses
+        a.btn(href="#") Join Us Now
+
+      div.hero-image-right
+        div.rhombus
+          img(src="/assets/herosection.jpeg")
+
+    section.course-section
+      h3 Our Courses
+      p Grab Which You Want
+      div.courses
+        each course in [1, 2, 3, 4, 5, 6, 7, 8]
+          div.course-list
+            img(src="/assets/images.jpg")
+            div.des
+              span Python
+              h5 Learning Modern Python Language
+              div.star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+
+    section#reviews.reviews-section
+      h3 Reviews
+      p Reviews Are The Mains
+      div.reviews
+        each review in [1, 2, 3]
+          div.reviews-list
+            img(src="/assets/images.jpg")
+            div.des
+              span Python
+              h5 Modern Python Language
+              div.star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+
+    section#about.aboutUS-section
+      h3 About US
+      p Clarify Your Queries
+      .aboutUS
+        .aboutUs-1
+          h3
+          p
+            | "At Coding Seekers, we are dedicated to empowering students on their educational and learning adventure.
+            | We understand the challenges that learners face, and our mission is to provide a supportive platform
+            | where students can explore, engage, and excel. With a commitment to excellence, we offer a diverse range
+            | of courses designed to enhance skills, foster creativity, and ignite a passion for learning. Our experienced
+            | educators and interactive learning resources create an enriching environment, fostering a love for knowledge.
+            | Join us in the pursuit of education, where every step is a discovery, and every achievement is a milestone
+            | towards a brighter future. Welcome to a place where learning knows no bounds!"
+
+        .aboutUs-3
+          p
+            | "Quality is the heartbeat of Coding Seekers. We take pride in our unwavering commitment to delivering top-notch education.
+            | With a focus on quality content, interactive learning methods, and personalized support, we strive to create an environment
+            | where each student can thrive. Join us and experience a commitment to quality that sets Coding Seekers apart."
+
+        .aboutUs-2
+          h5 Why Choose US?
+          p
+            | "At Coding Seekers, we stand out as a premier platform for learning and skill development. Why choose us? Because we are
+            | committed to providing a unique and enriching educational experience. Our courses are crafted with precision, offering
+            | practical knowledge and hands-on learning opportunities."
+          a.btn(href="#") Join Us
+
+    section#contact.contactUS-section
+      div.contactUS
+        h3 Contact US!
+        p Contact Us For Any Query
+
+        form(action="#")
+          div.input-box
+            each field in ["Full Name", "Email Address", "Phone Number", "Subject"]
+              div.input-field.field
+                input(type="text", placeholder=field, id=field.toLowerCase().replace(/\s+/g, '-'), class="item", autocomplete="off")
+                div.error-text #{field} can't be blank
+
+          div.textarea-field.field
+            textarea(itemtype="off", cols="30", rows="10", placeholder="Your Message", id="message", class="item", autocomplete="off")
+            div.error-text Message can't be blank
+
+          button.btn#formBtn Send Message
+
+    script(src="https://smtpjs.com/v3/smtp.js")

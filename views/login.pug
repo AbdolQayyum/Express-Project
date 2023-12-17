@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/stylesheets/login.css")
+    link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', rel='stylesheet')
+  body
+    .wrapper
+      span.bg-animate
+      span.bg-animate2
+      // Login form
+      .form-box.login
+        h2.animation(style="--i:0;--j:21;") Login
+        form(action="#")
+          // Username input
+          .input-box.animation(style="--i:1;--j:22;")
+            input(type="text", required)
+            label Username
+            i.bx.bxs-user
+
+          // Password input
+          .input-box.animation(style="--i:2;--j:23;")
+            input(type="password", required)
+            label Password
+            i.bx.bxs-lock-alt
+
+          // Login button with hyperlink
+          a(href="/login/mainpage")
+            button.btn.animation(type="submit", style="--i:3; --j:24;")
+              | Login
+
+          // Registration link
+          .logreg-link.animation(style="--i:4; --j:25;")
+            p Don't have an account?
+            a.register-link(href="#" class="register-link") Sign up
+
+      // Login info text
+      .info-text.login
+        h2.animation(style="--i:0; --j:20;") Welcome Back!
+        p.animation(style="--i:1; --j:21;") Here's the right place where you can learn coding languages
+
+      // Registration form
+      .form-box.register
+        h2.animation(style="--i:17; --j:0;") Sign Up
+        form(action="#")
+          // Username input
+          .input-box.animation(style="--i:18; --j:1;")
+            input(type="text", required)
+            label Username
+            i.bx.bxs-user
+
+          // Email input
+          .input-box.animation(style="--i:19;--j:2;")
+            input(type="text", required)
+            label Email
+            i.bx.bxs-envelope
+
+          // Password input
+          .input-box.animation(style="--i:20;--j:3;")
+            input(type="password", required)
+            label Password
+            i.bx.bxs-lock-alt
+
+          // Confirm Password input
+          .input-box.animation(style="--i:21;--j:4;")
+            input(type="password", required)
+            label Confirm Password
+            i.bx.bxs-lock-alt.animation
+
+          // Sign Up button
+          button.btn.animation(type="submit", style="--i:22; --j:5;") Sign Up
+
+          // Login link
+          .logreg-link.animation(style="--i:23; --j:6;")
+            p Already have an account?
+            a.login-link(href="#" class="login-link") Login
+
+      // Registration info text
+      .info-text.register
+        h2.animation(style="--i:17; --j:0;") Welcome Back!
+        p.animation(style="--i:18; --j:1;") Here's the right place where you can learn coding languages
+
+  script(src="/javascripts/scripts.js")

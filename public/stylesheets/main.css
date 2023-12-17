@@ -1,0 +1,465 @@
+/* main.css */
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081629;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background: #081629;
+}
+
+.logo {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #0ef;
+}
+
+.navbar a {
+    margin-left: 20px;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Add hover effect for navigation links */
+.navbar a:hover {
+    color: #eaeaea;
+}
+
+
+.dropdown .dropdown {
+    position: relative;
+}
+
+.dropdown a.btn-secondary.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: #0ef;
+}
+
+.dropdown-menu {
+    background-color: #081629;
+}
+
+.dropdown-menu a.dropdown-item {
+    color: #0ef;
+}
+
+/* Add hover effect for dropdown items */
+.dropdown-menu a.dropdown-item:hover {
+    background-color: #081629;
+    color: #eaeaea;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+}
+
+.social-media a {
+    color: #0ef;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    text-decoration: none;
+    transform: rotate(45deg);
+}
+
+.social-media a i {
+    font-size: 24px;
+    color: #0ef;
+    transform: rotate(-45deg);
+}
+
+/* Add hover effect for social media icons */
+.social-media a:hover {
+    color: #eaeaea;
+}
+
+.logo a:hover {
+    color: #eaeaea;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 600px;
+    background: linear-gradient(#0ef, #081629);
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 510px 100vw 0 0;
+    border-color: transparent transparent transparent #081629;
+}
+
+.hero-content-left {
+    
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+.hero-content-left h3 {
+    
+    color: #081629;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero-content-left h1 {
+    color: #eaeaea;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content-left p {
+    color: #081629;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #eaeaea;
+    border: 2px solid #0ef;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #081629;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #0ef;
+}
+
+.hero-image-right {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-left: 60%;
+    margin-top: 15%;
+    transform: rotate(45deg);
+}
+
+.hero-image-right .rhombus {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: transparent;
+    border: 20px solid #eaeaea;
+}
+
+.hero-image-right .rhombus img {
+    position: absolute;
+}
+
+h3{
+    color: #eaeaea;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+h5{
+    color: #0ef;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+p{
+    color: #0ef;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Reviews Css */
+.reviews-section .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.reviews-section .reviews-list {
+    margin-top: 5%;
+    width: 20%; 
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #0ef;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0ef;
+    transition: .3s ease;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.reviews-section .reviews-list img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.reviews-section .reviews .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+.reviews-section .reviews .des span {
+    color: #0ef;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.reviews-section .reviews .des h5 {
+    color: #eaeaea;
+    font-size: 14px;
+    font-weight: 600px;
+    padding-top: 7px;
+}
+
+.reviews-section .reviews .des i {
+    font-size: 12px;
+    color: yellow;
+}
+
+
+/* Add the following CSS to style the courses section */
+.course-section .courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.course-section .course-list {
+    margin-top: 5%;
+    width: 20%; 
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #0ef;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0ef;
+    transition: .3s ease;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.course-section .course-list:hover{
+
+    box-shadow: 0 0 30px #0ef;
+
+}
+
+.course-section .course-list img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.course-section .courses .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+.course-section .courses .des span {
+    color: #0ef;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.course-section .courses .des h5 {
+    color: #eaeaea;
+    font-size: 14px;
+    font-weight: 600px;
+    padding-top: 7px;
+}
+
+.course-section .courses .des i {
+    font-size: 12px;
+    color: yellow;
+}
+
+
+/* About US CSS */
+
+
+
+
+.aboutUS-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+
+.aboutUS {
+    margin-top: 5%;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.aboutUs-1 {
+    width: calc(56% - 20px);
+}
+
+.aboutUs-2,
+.aboutUs-3 {
+    width: calc(22% - 20px);
+}
+
+.aboutUs-1,
+.aboutUs-2,
+.aboutUs-3 {
+    padding: 20px;
+    border: 1px solid #0ef;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #eaeaea;
+    transition: .3s ease;
+    margin-bottom: 20px;
+}
+
+
+
+.aboutUS-section .aboutUs-1 p,
+.aboutUS-section .aboutUs-2 p,
+.aboutUS-section .aboutUs-3 p {
+    color: #eaeaea;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .aboutUs-1,
+    .aboutUs-2,
+    .aboutUs-3 {
+        width: 90%;
+    }
+}
+
+
+
+
+
+/* Contact US Css */
+.contactUS-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contactUS-section .contactUS h3,
+.contactUS-section .contactUS p {
+    color: #eaeaea;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.contactUS-section .contactUS p {
+    color: #0ef;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contactUS-section .contactUS form {
+    width: 600px;
+    text-align: center;
+    justify-content: center;
+}
+
+form .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box .input-field {
+    width: 48.5%;
+    box-sizing: border-box;
+}
+
+.field .item {
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 16px;
+    font-size: 16px;
+    color: #eaeaea;
+    margin: 12px 0;
+}
+
+.field .error-text {
+    font-size: 13px;
+    color: #d93025;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+form .textarea-field .item {
+    resize: none;
+}
+
+form .textarea-field .error-text {
+    margin-top: -10px;
+}
+
